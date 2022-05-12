@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmanagementsystem.controllers.MainController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="850.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #424242;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BANK" size="35" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="SMS ">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Button fx:id="dashboardBtn" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#showDashboardView" prefHeight="80.0" prefWidth="300.0" styleClass="sidebar-btn" text="Dashboard">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="DASHBOARD" size="20" styleClass="sidebar-icon" />
+                     </graphic>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="inoutbtn" alignment="BASELINE_LEFT" graphicTextGap="25.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#shwointoutview" prefHeight="80.0" prefWidth="300.0" styleClass="sidebar-btn" text="IN / OUT">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="REFRESH" size="20" styleClass="sidebar-icon" />
+                     </graphic>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="productBtn" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#showProductsView" prefHeight="80.0" prefWidth="300.0" styleClass="sidebar-btn" text="Products">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CUBES" size="20" styleClass="sidebar-icon" />
+                     </graphic>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="lowStockBtn" alignment="BASELINE_LEFT" graphicTextGap="25.0" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#showLowStockView" prefHeight="80.0" prefWidth="300.0" styleClass="sidebar-btn" text="Low Stock">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="BELL" size="20" styleClass="sidebar-icon" />
+                     </graphic>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="transactionBtn" alignment="BASELINE_LEFT" graphicTextGap="25.0" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#showTransactionView" prefHeight="80.0" prefWidth="300.0" styleClass="sidebar-btn" text="Transaction">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CALENDAR_ALT" size="18.0" styleClass="sidebar-icon" />
+                     </graphic>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="7.0" left="10.0" right="10.0" top="7.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <HBox fx:id="dashboardView" prefHeight="850.0" prefWidth="1100.0" spacing="40.0">
+               <children>
+                  <HBox maxHeight="200.0" prefHeight="100.0" prefWidth="400.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #00acc1;">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="CUBES" layoutX="88.0" layoutY="110.0" size="45" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label fx:id="productLabel" layoutX="32.0" layoutY="49.0" text="100">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="32.0" layoutY="115.0" text="Product">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" maxHeight="200.0" prefHeight="100.0" prefWidth="400.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ff9800;">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BELL" layoutX="88.0" layoutY="110.0" size="45" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Label fx:id="lowStockLabel" layoutX="32.0" layoutY="49.0" text="100">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="32.0" layoutY="115.0" text="Low Stock">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="40.0" top="40.0" />
+               </padding>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../style/app.css" />
+      <URL value="@../style/app.css" />
+   </stylesheets>
+</AnchorPane>
